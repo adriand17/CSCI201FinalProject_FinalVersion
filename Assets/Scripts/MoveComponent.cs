@@ -55,36 +55,36 @@ public class MoveComponent : MonoBehaviour
     //add to list of possible targets for impostor to kill.
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
-        {
-            MoveComponent targ = other.GetComponent<MoveComponent>();
-            //check if we are impostor
-            if (impostor)
-            {
-                if (!targ.impostor)
-                {
-                    killableTargets.Add(targ);
-                }
-            }
-        }
+        //if (other.tag == "Player")
+       //{
+         //   MoveComponent targ = other.GetComponent<MoveComponent>();
+         //   //check if we are impostor
+         //   if (impostor)
+         //   {
+         //       if (!targ.impostor)
+         //       {
+          //         killableTargets.Add(targ);
+          //      }
+          //  }
+       // }
     }
 
     //Remove players that leave our trigger
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
-        {
-            MoveComponent targ = other.GetComponent<MoveComponent>();
-            //check if we are impostor
-            if (impostor)
-            {
-                if (!targ.impostor)
-                {
-                    killableTargets.Remove(targ);
-                }
-            }
-        }
+        //if (other.tag == "Player")
+        //{
+         //   MoveComponent targ = other.GetComponent<MoveComponent>();
+        //    //check if we are impostor
+         //   if (impostor)
+           /// {
+           //     if (!targ.impostor)
+           ///     {
+            //        killableTargets.Remove(targ);
+            //    }
+         //   }
+      //  }
     }
 
 
